@@ -1,0 +1,251 @@
+/* ==========================================
+   Variables y Estilos Base
+   ========================================== */
+:root {
+    --bg-body: #0f172a; 
+    --bg-card: #1e293b; 
+    --bg-input: #334155; 
+    --text-main: #f8fafc; 
+    --text-muted: #94a3b8; 
+    --accent: #3b82f6; 
+    --accent-hover: #2563eb; 
+    --danger: #ef4444;
+    --bar-prior: #64748b; 
+    --bar-post: #3b82f6;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: system-ui, sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-body); 
+    color: var(--text-main); 
+    padding: 2rem; 
+}
+
+header { 
+    margin-bottom: 2rem; 
+    border-bottom: 1px solid #334155; 
+    padding-bottom: 1.5rem; 
+}
+
+h1 { 
+    font-size: 1.6rem; 
+    margin-bottom: 0.8rem; 
+    color: var(--accent); 
+}
+
+h2 { 
+    font-size: 1.2rem; 
+    margin-bottom: 1rem; 
+}
+
+.descripcion-problema { 
+    background: var(--bg-card); 
+    padding: 1rem; 
+    border-radius: 8px; 
+    border-left: 4px solid var(--accent); 
+    color: var(--text-muted); 
+    font-size: 0.95rem;
+}
+
+.descripcion-problema ul { 
+    margin-top: 0.5rem; 
+    margin-left: 1.5rem; 
+}
+
+.dashboard-container { 
+    display: grid; 
+    grid-template-columns: 380px 1fr; 
+    gap: 2rem; 
+    align-items: start; 
+}
+
+.card { 
+    background-color: var(--bg-card); 
+    border-radius: 8px; 
+    padding: 1.5rem; 
+    border: 1px solid #334155; 
+    margin-bottom: 1rem; 
+}
+
+/* ==========================================
+   Botones e Inputs
+   ========================================== */
+.botones-header { 
+    display: flex; 
+    gap: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.btn { 
+    flex: 1; 
+    padding: 0.6rem; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 0.85rem;
+}
+
+.btn-primary { 
+    background: var(--accent); 
+    color: white; 
+}
+
+.btn-secondary { 
+    background: transparent; 
+    color: white; 
+    border: 1px solid #475569; 
+}
+
+.input-group { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.9rem;
+}
+
+input { 
+    background: var(--bg-input); 
+    color: white; 
+    border: 1px solid #475569; 
+    padding: 0.4rem; 
+    border-radius: 4px; 
+    width: 75px; 
+    text-align: right;
+}
+
+input[type="text"] { 
+    width: 100%; 
+    text-align: left; 
+}
+
+.oculto { 
+    display: none !important; 
+}
+
+#error-banner { 
+    background: var(--danger); 
+    color: white; 
+    padding: 1rem; 
+    border-radius: 8px; 
+    margin-bottom: 1rem; 
+    font-weight: bold; 
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   Gráfica en CSS Puro
+   ========================================== */
+.grafica-css { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.2rem; 
+}
+
+.bar-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.3rem; 
+}
+
+.bar-label { 
+    font-size: 0.9rem; 
+    font-weight: 600; 
+}
+
+.bar-track { 
+    width: 100%; 
+    background: var(--bg-input); 
+    height: 24px; 
+    border-radius: 4px; 
+    overflow: hidden; 
+}
+
+.bar-fill { 
+    height: 100%; 
+    transition: width 0.4s ease-out; 
+    display: flex; 
+    align-items: center; 
+    padding-left: 8px; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.fill-prior { 
+    background-color: var(--bar-prior); 
+}
+
+.fill-post { 
+    background-color: var(--bar-post); 
+}
+
+.leyenda { 
+    margin-top: 1rem; 
+    font-size: 0.85rem; 
+    display: flex; 
+    gap: 1rem; 
+}
+
+.dot { 
+    display: inline-block; 
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%; 
+}
+
+.dot.prior { 
+    background: var(--bar-prior); 
+}
+
+.dot.post { 
+    background: var(--bar-post); 
+}
+
+/* ==========================================
+   Fracciones Matemáticas en HTML/CSS
+   ========================================== */
+.math-panel { 
+    background: #1e293b; 
+    border-left: 4px solid #10b981; 
+    overflow-x: auto; 
+}
+
+.formula-texto { 
+    font-family: monospace; 
+    font-size: 1.05rem; 
+    line-height: 2; 
+}
+
+.fraccion { 
+    display: inline-flex; 
+    flex-direction: column; 
+    align-items: center; 
+    vertical-align: middle; 
+    margin: 0 0.5rem; 
+}
+
+.numerador { 
+    border-bottom: 2px solid var(--text-main); 
+    padding: 0 0.4rem; 
+}
+
+.denominador { 
+    padding: 0 0.4rem; 
+}
+
+/* ==========================================
+   Responsividad
+   ========================================== */
+@media (max-width: 992px) {
+    .dashboard-container { 
+        grid-template-columns: 1fr; 
+    }
+}
